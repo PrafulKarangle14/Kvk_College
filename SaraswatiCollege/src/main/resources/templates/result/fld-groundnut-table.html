@@ -1,0 +1,29 @@
+<!DOCTYPE html>
+<html xmlns:th="http://www.thymeleaf.org">
+<head><title>Groundnut FLD Data</title></head>
+<body>
+<h2>All FLD (Groundnut) Records</h2>
+<a href="/fld-groundnut/add">Add New Record</a>
+<table border="1">
+    <tr>
+        <th>ID</th><th>Soil</th><th>Area</th><th>Yield</th><th>Spacing</th>
+        <th>Production</th><th>Harvest</th><th>Sowing</th><th>Productivity</th>
+        <th>Water</th><th>Fertilizer</th><th>Pest Control</th>
+    </tr>
+    <tr th:each="f : ${fldList}">
+        <td th:text="${f.id}"></td>
+        <td th:text="${f.soilType}"></td>
+        <td th:text="${f.areaInAcres}"></td>
+        <td th:text="${f.yieldPerAcre}"></td>
+        <td th:text="${f.spacingInCm}"></td>
+        <td th:text="${f.productionKg}"></td>
+        <td th:text="${f.harvestingTimeMonths}"></td>
+        <td th:text="${f.sowingTimeMonths}"></td>
+        <td th:text="${f.productivityKgPerHa}"></td>
+        <td th:text="${f.waterRequirementLiters}"></td>
+        <td th:text="${f.fertilizerRequirementKg}"></td>
+        <td th:text="${f.weedingAndPestControl}"></td>
+    </tr>
+</table>
+</body>
+</html>

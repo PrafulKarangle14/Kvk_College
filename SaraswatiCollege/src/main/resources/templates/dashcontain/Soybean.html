@@ -1,0 +1,161 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <title>soyabean</title>
+  <style>
+    body {
+      font-family: 'Segoe UI', sans-serif;
+      background: url('/background/soybean.png') no-repeat center center fixed;
+      background-size: cover;
+      display: flex;
+      justify-content: center;
+      padding: 40px;
+    }
+
+    .form-container {
+      background-color: rgba(255, 255, 255, 0.527);
+      padding: 20px;
+      border-radius: 8px;
+      width: 600px;
+      box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+      position: relative;
+    }
+
+    .form-container h2 {
+      text-align: center;
+      color: #3f7d20;
+      margin-bottom: 20px;
+    }
+
+    .form-group {
+      display: flex;
+      align-items: center;
+      margin-bottom: 15px;
+    }
+
+    .form-group label {
+      width: 180px;
+      font-size: 15px;
+      color: #333;
+    }
+
+    .form-group input,
+    .form-group textarea {
+      flex: 1;
+      padding: 10px;
+      font-size: 14px;
+      border: 2px solid #3f7d20;
+      border-radius: 5px;
+    }
+
+    .form-group textarea {
+      resize: vertical;
+    }
+
+    .submit-btn {
+      background-color: #3f7d20;
+      color: white;
+      padding: 12px 24px;
+      border: none;
+      border-radius: 5px;
+      font-size: 16px;
+      cursor: pointer;
+      transition: 0.3s ease;
+      width: 100%;
+      margin-top: 20px;
+    }
+
+    .submit-btn:hover {
+      background-color: #3f7d20;
+    }
+
+    .back-btn {
+      position: absolute;
+      top: 10px;
+      left: 10px;
+      background-color: #3f7d20;
+      color: white;
+      padding: 8px 16px;
+      border: none;
+      border-radius: 5px;
+      cursor: pointer;
+      font-size: 14px;
+      text-decoration: none;
+    }
+
+    .back-btn:hover {
+      background-color: #3f7d20;
+    }
+  </style>
+</head>
+<body>
+
+  <div class="form-container">
+    <a href="FLD.html" class="back-btn">Back</a>
+    <h2>FLD (Soybean)</h2>
+    <form action="/soyabean/save" method="post" id="cottonForm" >
+      <div class="form-group">
+        <label for="soil">Soil Type</label>
+        <input type="text" id="soil" name="soil" required>
+      </div>
+
+      <div class="form-group">
+        <label for="area">Area (in acres)</label>
+        <input type="number" id="area" name="area" required>
+      </div>
+
+      <div class="form-group">
+        <label for="yield">Yield (kg/acre)</label>
+        <input type="number" id="yield" name="yield" required>
+      </div>
+
+      <div class="form-group">
+        <label for="spacing">Spacing (cm)</label>
+        <input type="number" id="spacing" name="spacing" required>
+      </div>
+
+      <div class="form-group">
+        <label for="production">Production (kg)</label>
+        <input type="number" id="production" name="production" required>
+      </div>
+
+      <div class="form-group">
+        <label for="harvesting">Harvesting Time (months)</label>
+        <input type="number" id="harvesting" name="harvesting" required>
+      </div>
+
+      <div class="form-group">
+        <label for="sowingTime">Sowing Time (months)</label>
+        <input type="number" id="sowingTime" name="sowingTime" required>
+      </div>
+
+      <div class="form-group">
+        <label for="productivity">Productivity (kg/ha)</label>
+        <input type="number" id="productivity" name="productivity" required>
+      </div>
+
+      <div class="form-group">
+        <label for="waterRequirement">Water Requirement (liters)</label>
+        <input type="number" id="waterRequirement" name="waterRequirement" required>
+      </div>
+
+      <div class="form-group">
+        <label for="fertilizerRequirement">Fertilizer Requirement (kg)</label>
+        <input type="number" id="fertilizerRequirement" name="fertilizerRequirement" required>
+      </div>
+
+      <div class="form-group">
+        <label for="weedPestControl">Weedding & Pest Control</label>
+        <textarea id="weedPestControl" name="weedPestControl" rows="3" required></textarea>
+      </div>
+
+      <button type="submit" class="submit-btn">Submit</button>
+    </form>
+  </div>
+
+  
+  
+
+</body>
+</html>

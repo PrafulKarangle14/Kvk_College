@@ -1,0 +1,29 @@
+<!DOCTYPE html>
+<html>
+<head><title>All Oftonion Crops</title></head>
+<body>
+<h2>Oftonion Crop List</h2>
+<table border="1">
+    <tr>
+        <th>Name</th><th>Soil</th><th>Area</th><th>Yield</th><th>Climate</th>
+        <th>Spacing</th><th>Wedding</th><th>Maturity</th><th>Irrigation</th>
+        <th>Harvesting</th><th>Sowing Time</th><th>Fertilization</th><th>Propagation</th>
+    </tr>
+    <tr th:each="o : ${oftonions}">
+        <td th:text="${o.name}"></td>
+        <td th:text="${o.soil}"></td>
+        <td th:text="${o.area}"></td>
+        <td th:text="${o.yield}"></td>
+        <td th:text="${o.climate}"></td>
+        <td th:text="${o.spacing}"></td>
+        <td th:text="${o.wedding}"></td>
+        <td th:text="${o.maturity}"></td>
+        <td th:text="${o.irrigation}"></td>
+        <td th:text="${o.harvesting}"></td>
+        <td th:text="${o.sowingTime}"></td>
+        <td th:text="${o.fertilization}"></td>
+        <td th:text="${o.propagation}"></td>
+    </tr>
+</table>
+</body>
+</html>

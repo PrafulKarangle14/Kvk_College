@@ -1,0 +1,59 @@
+<!DOCTYPE html>
+<html xmlns:th="http://www.thymeleaf.org">
+<head>
+    <title>Soyabean Crop Data</title>
+    <style>
+        table {
+            width: 100%;
+            border-collapse: collapse;
+        }
+
+        th, td {
+            border: 1px solid #ccc;
+            padding: 8px;
+        }
+
+        th {
+            background-color: #eee;
+        }
+    </style>
+</head>
+<body>
+<h2>Soyabean Crop Data</h2>
+
+<table>
+    <thead>
+        <tr>
+            <th>ID</th>
+            <th>Soil Type</th>
+            <th>Area (acres)</th>
+            <th>Yield (kg/acre)</th>
+            <th>Spacing (cm)</th>
+            <th>Production (kg)</th>
+            <th>Harvesting Time (months)</th>
+            <th>Sowing Time (months)</th>
+            <th>Productivity (kg/ha)</th>
+            <th>Water Requirement (liters)</th>
+            <th>Fertilizer Requirement (kg)</th>
+            <th>Weeding & Pest Control</th>
+        </tr>
+    </thead>
+    <tbody>
+        <tr th:each="s : ${soyabeanList}">
+            <td th:text="${s.id}"></td>
+            <td th:text="${s.soilType}"></td>
+            <td th:text="${s.area}"></td>
+            <td th:text="${s.yield}"></td>
+            <td th:text="${s.spacing}"></td>
+            <td th:text="${s.production}"></td>
+            <td th:text="${s.harvestingTime}"></td>
+            <td th:text="${s.sowingTime}"></td>
+            <td th:text="${s.productivity}"></td>
+            <td th:text="${s.waterRequirement}"></td>
+            <td th:text="${s.fertilizerRequirement}"></td>
+            <td th:text="${s.weedingAndPestControl}"></td>
+        </tr>
+    </tbody>
+</table>
+</body>
+</html>

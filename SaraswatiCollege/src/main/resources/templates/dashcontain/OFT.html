@@ -1,0 +1,226 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+	<meta charset="UTF-8">
+	<title>KVK Crop Dashboard - 3 Sections</title>
+	<style>
+		body {
+			font-family: 'Segoe UI', sans-serif;
+			background-color: #fff;
+			display: flex;
+			justify-content: center;
+			padding: 40px;
+		}
+
+		.container {
+			display: grid;
+			grid-template-columns: repeat(2, 1fr);
+			gap: 40px;
+		}
+
+		.column {
+			display: flex;
+			flex-direction: column;
+			gap: 16px;
+		}
+
+		.category-title {
+			border: 2px solid #3f7d20;
+			border-radius: 8px;
+			padding: 30px 20px;
+			text-align: center;
+			font-weight: bold;
+			color: #ffffff;
+			font-size: 18px;
+			background-color: #3f7d20;
+			cursor: pointer;
+		}
+
+		.item-button {
+			display: flex;
+			align-items: center;
+			justify-content: center;
+			gap: 10px;
+			border: 2px solid #3f7d20;
+			border-radius: 8px;
+			padding: 10px 20px;
+			background-color: #fff;
+			color: #3f7d20;
+			font-weight: 500;
+			cursor: pointer;
+			transition: all 0.2s ease;
+		}
+
+		.item-button img {
+			width: 30px;
+			height: 30px;
+			border-radius: 80px;
+		}
+
+		.item-button:hover {
+			background-color: #e9ffe9;
+		}
+
+		.field-items {
+			display: none;
+			flex-direction: column;
+			gap: 16px;
+			align-items: center;
+		}
+
+		.livestock-center {
+			grid-column: 1 / span 2;
+			display: flex;
+			flex-direction: column;
+			align-items: center;
+			gap: 16px;
+			justify-content: center;
+		}
+
+		.livestock-center .category-title {
+			margin-bottom: 20px;
+		}
+	</style>
+</head>
+
+<body>
+
+	<div class="container">
+		<!-- Crop Based Trials Section -->
+		<div class="column">
+			<div class="category-title" onclick="toggleFieldItems('cropBasedItems')">Crop Based Trials</div>
+
+			<div class="field-items" id="cropBasedItems">
+				<a href="/admin/oftSoyabean" class="item-button">
+					<img src="/image/soyabean.png" alt="Soybean" />
+					Soyabean
+				</a>
+
+				<a href="/admin/oftCotton" class="item-button">
+					<img src="/image/cotton.png" alt="Cotton" />
+					Cotton
+				</a>
+
+				<a href="/admin/oftTurmeric" class="item-button">
+					<img src="/image/Turmeric.png" alt="Turmeric" />
+					Turmeric
+				</a>
+
+
+				<a href="/admin/oftOnion" class="item-button">
+					<img src="/image/Onion.png" alt="Onion" />
+					Onion
+				</a>
+
+				<a href="/admin/oftGarlic" class="item-button">
+					<img src="/image/garlic.jpg" alt="Garlic" />
+					Garlic
+				</a>
+
+
+				<a href="/admin/oftOrange" class="item-button">
+					<img src="/image/orange.png" alt="Orange" />
+					Orange
+				</a>
+
+				<a href="/admin/oftChickpea" class="item-button">
+					<img src="/image/orange.png" alt="Orange" />
+					Orange
+				</a>
+
+			</div>
+		</div>
+
+		<!-- Farm Machinery Trials Section -->
+		<div class="column">
+			<div class="category-title" onclick="toggleFieldItems('machineryItems')">Farm Machinery Trials</div>
+
+			<div class="field-items" id="machineryItems">
+				<div class="item-button" onclick="openForm('Maize')">
+					<img src="/image/Maize.png" alt="Maize" />
+					Maize
+				</div>
+
+				<div class="item-button" onclick="openForm('Onion')">
+					<img src="/image/Onion.png" alt="Onion" />
+					Onion
+				</div>
+
+				<div class="item-button" onclick="openForm('Garlic')">
+					<img src="/image/garlic.jpg" alt="Garlic" />
+					Garlic
+				</div>
+
+				<div class="item-button" onclick="openForm('Ajwain')">
+					<img src="/image/Ajwain.png" alt="Ajwain" />
+					Ajwain
+				</div>
+			</div>
+		</div>
+
+		<!-- Livestock Based Trials Section -->
+		<div class="livestock-center">
+			<div class="category-title" onclick="toggleFieldItems('livestockItems')">Hivestock Based Trials</div>
+
+			<div class="field-items" id="livestockItems">
+				<div class="item-button" onclick="openForm('Poultry')">
+					<img src="/image/poultry.png" alt="Poultry" />
+					Poultry
+				</div>
+
+				<div class="item-button" onclick="openForm('Dairy Cattle')">
+					<img src="/image/dairy cattle.jpg" alt="Dairy Cattle" />
+					Dairy Cattle
+				</div>
+			</div>
+		</div>
+	</div>
+
+	<script>
+		function openForm(crop) {
+			console.log("Opening form for:", crop);
+
+			if (crop === 'Soyabean') {
+				location.href = 'soyabean-form.html';
+			} else if (crop === 'Cotton') {
+				location.href = 'cotton-form.html';
+			} else if (crop === 'Turmeric') {
+				location.href = 'turmeric-form.html';
+			} else if (crop === 'Onion') {
+				location.href = 'onion-form.html';
+			} else if (crop === 'Garlic') {
+				location.href = 'garlic-form1.html';
+			} else if (crop === 'Orange') {
+				location.href = 'orange-form.html';
+			} else if (crop === 'Chickpea') {
+				location.href = 'chickpea-form.html';
+			} else if (crop === 'Maize') {
+				location.href = 'maize-form.html';
+			} else if (crop === 'Ajwain') {
+				location.href = 'ajwain-form.html';
+			} else if (crop === 'Poultry') {
+				location.href = 'poultry-form.html';
+			} else if (crop === 'Dairy Cattle') {
+				location.href = 'dairy-cattle-form.html';
+			}
+		}
+
+		function toggleFieldItems(id) {
+			const allFieldItems = document.querySelectorAll('.field-items');
+
+			const selectedFieldItems = document.getElementById(id);
+			if (selectedFieldItems.style.display === 'flex') {
+				selectedFieldItems.style.display = 'none';
+			} else {
+				allFieldItems.forEach(function (item) {
+					item.style.display = 'none';
+				});
+				selectedFieldItems.style.display = 'flex';
+			}
+		}
+	</script>
+
+</body>
+
+</html>

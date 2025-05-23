@@ -1,0 +1,152 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <title>FLD(BBF Planter)</title>
+  <style>
+    body {
+      font-family: 'Segoe UI', sans-serif;
+      background: url('/background/bbf.png') no-repeat center center fixed;
+      background-size: cover;
+      display: flex;
+      justify-content: center;
+      padding: 40px;
+    }
+
+    .form-container {
+      background-color: rgba(255, 255, 255, 0.527);
+      padding: 20px;
+      border-radius: 8px;
+      width: 600px;
+      box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+      position: relative;
+    }
+
+    .form-container h2 {
+      text-align: center;
+      color: #3f7d20;
+      margin-bottom: 20px;
+    }
+
+    .form-group {
+      display: flex;
+      align-items: center;
+      margin-bottom: 15px;
+    }
+
+    .form-group label {
+      width: 180px;
+      font-size: 15px;
+      color: #333;
+    }
+
+    .form-group input,
+    .form-group textarea {
+      flex: 1;
+      padding: 10px;
+      font-size: 14px;
+      border: 2px solid #3f7d20;
+      border-radius: 5px;
+    }
+
+    .form-group textarea {
+      resize: vertical;
+    }
+
+    .submit-btn {
+      background-color: #3f7d20;
+      color: white;
+      padding: 12px 24px;
+      border: none;
+      border-radius: 5px;
+      font-size: 16px;
+      cursor: pointer;
+      transition: 0.3s ease;
+      width: 100%;
+      margin-top: 20px;
+    }
+
+    .submit-btn:hover {
+      background-color: #3f7d20;
+    }
+
+    .back-btn {
+      position: absolute;
+      top: 10px;
+      left: 10px;
+      background-color: #3f7d20;
+      color: white;
+      padding: 8px 16px;
+      border: none;
+      border-radius: 5px;
+      cursor: pointer;
+      font-size: 14px;
+      text-decoration: none;
+    }
+
+    .back-btn:hover {
+      background-color: #3f7d20;
+    }
+  </style>
+</head>
+<body>
+
+  <div class="form-container">
+    <a href="FLD.html" class="back-btn">Back</a>
+    <h2>FLD (BBF Planter)</h2>
+    <form id="cottonForm">
+      <div class="form-group">
+        <label for="rowSpacing">Row Spacing</label>
+        <input type="number" id="rowSpacing" name="rowSpacing" required>
+      </div>
+
+      <div class="form-group">
+        <label for="depthControl">Depth Control</label>
+        <input type="number" id="depthControl" name="depthControl" required>
+      </div>
+
+      <div class="form-group">
+        <label for="workingWidth">Working Width</label>
+        <input type="number" id="workingWidth" name="workingWidth" required>
+      </div>
+
+      <div class="form-group">
+        <label for="outputCapacity">Output Capacity</label>
+        <input type="number" id="outputCapacity" name="outputCapacity" required>
+      </div>
+
+      <div class="form-group">
+        <label for="tractorPowerRequired">Tractor Power Required</label>
+        <input type="number" id="tractorPowerRequired" name="tractorPowerRequired" required>
+      </div>
+
+      <div class="form-group">
+        <label for="seedFertilizerBoxCapacity">Seed & Fertilizer Box Capacity</label>
+        <input type="number" id="seedFertilizerBoxCapacity" name="seedFertilizerBoxCapacity" required>
+      </div>
+
+      <button type="submit" class="submit-btn">Submit</button>
+    </form>
+  </div>
+
+  <script>
+    document.getElementById('cottonForm').addEventListener('submit', function(e) {
+      e.preventDefault();
+  
+      const formData = new FormData(e.target);
+      let formDetails = '';
+      formData.forEach((value, key) => {
+        formDetails += `${key}: ${value}\n`;
+      });
+  
+      alert("Form Submitted with the following details:\n\n" + formDetails);
+      
+      // Redirect to FLD.html after alert
+      setTimeout(function() {
+        window.location.href = "FLD.html";
+      }, 100); // slight delay to allow alert to be seen
+    });
+  </script>
+
+</body>
+</html>

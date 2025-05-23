@@ -1,0 +1,27 @@
+<!DOCTYPE html>
+<html xmlns:th="http://www.thymeleaf.org">
+<head>
+    <title>Add Garlic FLD</title>
+</head>
+<body>
+<h2>Add Garlic FLD Information</h2>
+
+<form th:action="@{/admin/save-garlic}" th:object="${fldGarlic}" method="post">
+    <label>Soil: <input type="text" th:field="*{soil}" /></label><br/>
+    <label>Area: <input type="text" th:field="*{area}" /></label><br/>
+    <label>Yield: <input type="text" th:field="*{yield}" /></label><br/>
+    <label>Climate: <input type="text" th:field="*{climate}" /></label><br/>
+    <label>Spacing: <input type="text" th:field="*{spacing}" /></label><br/>
+    <label>Wedding: <input type="text" th:field="*{wedding}" /></label><br/>
+    <label>Maturity: <input type="text" th:field="*{maturity}" /></label><br/>
+    <label>Irrigation: <input type="text" th:field="*{irrigation}" /></label><br/>
+    <label>Harvesting: <input type="text" th:field="*{harvesting}" /></label><br/>
+    <label>Sowing Time: <input type="text" th:field="*{sowingTime}" /></label><br/>
+    <label>Fertilization: <input type="text" th:field="*{fertilization}" /></label><br/>
+    <label>Propagation: <input type="text" th:field="*{propagation}" /></label><br/>
+    <button type="submit">Save</button>
+</form>
+
+<a href="/admin/garlic-data">View All Garlic FLD Data</a>
+</body>
+</html>

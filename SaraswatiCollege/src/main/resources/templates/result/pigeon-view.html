@@ -1,0 +1,62 @@
+<!DOCTYPE html>
+<html xmlns:th="http://www.thymeleaf.org">
+<head>
+    <title>All Pigeon Crop Data</title>
+    <style>
+        table {
+            width: 100%;
+            border-collapse: collapse;
+        }
+
+        th, td {
+            border: 1px solid #444;
+            padding: 8px;
+            text-align: left;
+        }
+
+        th {
+            background-color: #eee;
+        }
+    </style>
+</head>
+<body>
+
+<h2>Pigeon Crop Data Table</h2>
+
+<table>
+    <thead>
+        <tr>
+            <th>ID</th>
+            <th>Soil Type</th>
+            <th>Area (acres)</th>
+            <th>Yield (kg/acre)</th>
+            <th>Spacing (cm)</th>
+            <th>Production (kg)</th>
+            <th>Harvesting Time (months)</th>
+            <th>Sowing Time (months)</th>
+            <th>Productivity (kg/ha)</th>
+            <th>Water Requirement (liters)</th>
+            <th>Fertilizer Requirement (kg)</th>
+            <th>Weeding & Pest Control</th>
+        </tr>
+    </thead>
+    <tbody>
+        <tr th:each="pigeon : ${pigeons}">
+            <td th:text="${pigeon.id}"></td>
+            <td th:text="${pigeon.soilType}"></td>
+            <td th:text="${pigeon.area}"></td>
+            <td th:text="${pigeon.yield}"></td>
+            <td th:text="${pigeon.spacing}"></td>
+            <td th:text="${pigeon.production}"></td>
+            <td th:text="${pigeon.harvestingTime}"></td>
+            <td th:text="${pigeon.sowingTime}"></td>
+            <td th:text="${pigeon.productivity}"></td>
+            <td th:text="${pigeon.waterRequirement}"></td>
+            <td th:text="${pigeon.fertilizerRequirement}"></td>
+            <td th:text="${pigeon.weedingAndPestControl}"></td>
+        </tr>
+    </tbody>
+</table>
+
+</body>
+</html>

@@ -1,0 +1,244 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+	<meta charset="UTF-8">
+	<meta name="viewport" content="width=device-width, initial-scale=1.0">
+	<title>KVK Webpage</title>
+	<link rel="stylesheet" href="/css/kvk.css">
+</head>
+
+<body>
+	<header>
+		<nav>
+			<div class="logo">
+				<img th:src="@{/image/Kvk logo.png}" alt="KVK Logo"> KVK Buldhana 1
+			</div>
+			<ul class="nav-links">
+				<li><a href="/users/home">Home</a></li>
+				<li class="nav-link">
+					<a href="/users/about">About</a>
+
+					<ul class="drop-down">
+						<li>
+						<li><a href="/users/mandates">Mandate of KVK</a></li>
+						<li><a href="/users/location">Location</a></li>
+						<li><a href="/users/operational">Operational area</a></li>
+						<li><a href="/users/silent">Silent features of<br>Buldhana District</a></li>
+				</li>
+			</ul>
+			<li class="nav-link">
+				<a href="#activities">Activities</a>
+
+				<ul class="drop-down">
+					<li>
+					<li><a href="/users/training">Training Programs</a></li>
+					<li><a href="/users/front">Front Line Demonstration</a></li>
+					<li><a href="/users/on farm">On Farm Testing</a></li>
+					<li><a href="/users/extension">Extension Activities</a></li>
+			</li>
+			</ul>
+			<li class="nav-link">
+				<a href="#events">Events</a>
+				<ul class="drop-down">
+					<li><a href="/users/event1">Agriculture Exhibition<br>SATPUDA AGROTECH-2023</a></li>
+					<li><a href="/users/event2">Scientific Advisory<br>Committee Meeting</a></li>
+					<li><a href="/users/event3">Visit of ICAR Scientist to KVK</a></li>
+					<li><a href="/users/event4">Skill Development Training<br>Under ASCI</a></li>
+					<li><a href="/users/event5">Visit of Hon. Dr. Shakir Ali,<br>Principal Scientist, ICAR-ATARI,
+							Pune</a></li>
+					<li><a href="/users/event6">Celebration of Agriculture<br>Technology Week</a></li>
+				</ul>
+			</li>
+
+			<ul class="nav">
+				<li class="nav-link">
+					<a href="/users/login" class="btn">Log in</a>
+
+			</ul>
+
+			</ul>
+		</nav>
+	</header>
+	<section id="home" class="hero">
+		<img th:src="@{/image/KVK Building (1).jpeg}" alt="KVK Building">
+	</section>
+
+	<section class="cards-container">
+		<div class="card">
+			<img th:src="@{/image/Events.jpeg}" alt="Events">
+			<h3>Events</h3>
+		</div>
+		<div class="card">
+			<img th:src="@{/image/front line.jpeg}" alt="Front Line Demonstration">
+			<h3>Front Line Demonstration</h3>
+		</div>
+		<div class="card">
+			<img th:src="@{/image/on field training.jpeg}" alt="On Field Training">
+			<h3>On Field Training</h3>
+		</div>
+		<div class="card">
+			<img th:src="@{/image/training program.jpeg}" alt="Training and Special Program">
+			<h3>Training & Special Program</h3>
+		</div>
+		<div class="card">
+			<img th:src="@{/image/Report.jpeg}" alt="Report">
+			<h3>Report</h3>
+		</div>
+	</section>
+
+	<section class="info-section">
+		<div class="info-block history">
+			<div class="info-header">
+				<img th:src="@{/image/History logo.png}" alt="History Icon">
+				<h2>History</h2>
+			</div>
+			<p>Krishi Vigyan Kendra has been sanctioned to Satpuda Education Society, Jalgaon Jamod, Buldana by Indian
+				Council of Agriculture Research, New Delhi vide letter No. 3-4/94-KVK-AEII dated 19.10.1994 for catering
+				need based trainings to Practicing Farmers, Rural Youth and In-service Extension Functionaries, on-farm
+				testing and Front Line Demonstration of different crops, which are grown in Buldana District.</p>
+		</div>
+
+		<div class="info-block achievements">
+			<div class="info-header">
+				<img th:src="@{/image/achievement.png}" alt="Achievements Icon">
+				<h2>Achievements</h2>
+			</div>
+			<p><u>Training Programs</u>:- KVK Jalgaon Jamod has conducted numerous training sessions aimed at equipping
+				farmers, farm women, and rural youth with modern agricultural techniques, thereby improving productivity
+				and income.<br><br>
+
+				<u> Frontline Demonstrations (FLDs)</u>:- The center has implemented FLDs on various crops and
+				technologies, showcasing improved practices directly in farmers' fields to encourage adoption. <br><br>
+
+				<u>On-Farm Trials (OFTs)</u>:- By conducting OFTs, KVK Jalgaon Jamod assesses the performance of new
+				technologies under local conditions, facilitating evidence-based recommendations to the farming
+				community. <br><br>
+
+				<u>Collaborative Projects</u>:- The KVK has partnered with various organizations and participated in
+				government initiatives like the Jalyukta Shivar Abhiyan, contributing to water conservation and
+				management efforts in the region. <br><br>
+
+				<u> Publications and Outreach</u>:- Through newsletters and other publications, KVK Jalgaon Jamod
+				disseminates valuable agricultural information, success stories, and updates on its activities to a
+				broader audience.<br><br>
+			</p>
+		</div>
+	</section>
+
+	<section class="experts-section">
+		<div class="green-box">
+			<h2 class="section-title">
+				<img th:src="@{/image/experts.jpeg}" alt="KVK Logo" class="kvk-logo">
+				KVK Experts
+			</h2>
+			<div class="experts-container">
+				<div class="member">
+					<img th:src="@{/image/Vikas Jadhao 1.jpeg}" alt="Dr. Vikas G. Jadhao">
+					<p><strong>Dr. Vikas G. Jadhao</strong><br>Sr. Scientist & Head</p>
+				</div>
+				<div class="member">
+					<img th:src="@{/image/Anil Gabhane.jpeg}" alt="Dr. Anil T. Gabhane">
+					<p><strong>Dr. Anil T. Gabhane</strong><br>Subject Matter Specialist (PP)</p>
+				</div>
+				<div class="member">
+					<img th:src="@{/image/Shyamsundar Borde.jpeg}" alt="Dr. Shyam A. Borde">
+					<p><strong>Dr. Shyam A. Borde</strong><br>Subject Matter Specialist (Agri.Extension)</p>
+				</div>
+				<div class="member">
+					<img th:src="@{/image/Sanjay Umale.jpeg}" alt="Dr. Sanjay M. Umale">
+					<p><strong>Dr. Sanjay M. Umale</strong><br>Subject Matter Specialist (Agronomy)</p>
+				</div>
+				<div class="member">
+					<img th:src="@{/image/Dr. Vinod Janotkar.jpeg}" alt="Dr. Vinod S. Janotkar">
+					<p><strong>Dr. Vinod S. Janotkar</strong><br>Subject Matter Specialist (Vet. Science)</p>
+				</div>
+				<div class="member">
+					<img th:src="@{/image/Shashank Datey.jpeg}" alt="Dr. Shashank Datey">
+					<p><strong>Dr. Shashank Datey</strong><br>Subject Matter Specialist (Horticulture)</p>
+				</div>
+				<div class="member">
+					<img th:src="@{/image/NItin Talokar.jpeg}" alt="Dr. Nitin P. Talokar">
+					<p><strong>Dr. Nitin P. Talokar</strong><br>Subject Matter Specialist (Agriculture Engg)</p>
+				</div>
+				<div class="member">
+					<img th:src="@{/Samadhan Bagade.jpeg}" alt="Dr. Samadhan J. Bagade">
+					<p><strong>Dr. Samadhan J. Bagade</strong><br>Farm Manager</p>
+				</div>
+				<div class="member">
+					<img th:src="@{/image/Yogesh Wakekar.jpeg}" alt="Dr. Yogesh R. Wakekar">
+					<p><strong>Dr. Yogesh R. Wakekar</strong><br>Programme Asstt. Comp.</p>
+				</div>
+				<div class="member">
+					<img th:src="@{/image/Pradip Raut.jpeg}" alt="Dr. Pradip E. Raut">
+					<p><strong>Dr. Pradip E. Raut</strong><br>Office Suptd.</p>
+				</div>
+			</div>
+		</div>
+	</section>
+
+	<section class="glance-section">
+		<div class="header">
+			<h1 class="green-heading">KVK AT A GLANCE</h1>
+
+		</div>
+
+
+		<div class="card-container">
+			<div class="info-card">
+				<div class="icon"><img th:src="@{/image/farm logo.jpeg}" alt="farm"></div>
+				<h2>KVK Farm</h2>
+				<p>KVK Instructional Farm. Total land: 20.59 ha. Area under building.</p>
+				<a href="kvkfarm.html" class="read-more">Read More...</a>
+			</div>
+
+			<div class="info-card">
+				<div class="icon"><img th:src="@{/image/demonstration logo.jpeg}" alt="demo"></div>
+				<h2>Demonstration Unit</h2>
+				<p>For providing subsidiary business to rural youth and demonstration purpose, KVK have established
+					various demonstration units.</p>
+				<a href="demonstration.html" class="read-more">Read More...</a>
+			</div>
+
+			<div class="info-card">
+				<div class="icon"><img th:src="@{/image/services.jpeg}" alt="infra"></div>
+				<h2>Infrastructure</h2>
+				<p>Administrative Building, Farmers Hostel, Staff Quarters.</p>
+				<a href="infra.html" class="read-more">Read More...</a>
+			</div>
+
+			<div class="info-card">
+				<div class="icon"><img th:src="@{/image/letter logo.jpeg}" alt="letter"></div>
+				<h2>KVK Letter News</h2>
+				<p>Administrative Building, Farmers Hostel, Staff Quarters.</p>
+				<a href="news.html" class="read-more">Read More...</a>
+			</div>
+
+			<div class="info-card">
+				<div class="icon"><img src="services.jpeg" alt="services"></div>
+				<h2>Services</h2>
+				<p>Administrative Building, Farmers Hostel, Staff Quarters.</p>
+				<a href="services.html" class="read-more">Read More...</a>
+			</div>
+
+			<div class="info-card">
+				<div class="icon"><img th:src="@{/image/requirement logo.jpeg}" alt="requirement"></div>
+				<h2>Requirements</h2>
+				<p>Administrative Building, Farmers Hostel, Staff Quarters.</p>
+				<a href="requirement.html" class="read-more">Read More...</a>
+			</div>
+		</div>
+	</section>
+
+	<div class="pdf-download">
+		<button onclick="window.print()">📄 Download PDF</button>
+	</div>
+
+	<footer>
+		<p>&copy; 2025 KVK Jalgaon Jamod | Powered by kvkbuldana.com</p>
+	</footer>
+
+
+</body>
+
+</html>

@@ -1,0 +1,109 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+	<meta charset="UTF-8">
+	<meta name="viewport" content="width=device-width, initial-scale=1.0">
+	<title>ICAR Scientist Visit - KVK Jalgaon Jamod</title>
+	<link rel="stylesheet" th:href="@{/css/event3.css}">
+	<link href="https://fonts.googleapis.com/css2?family=Roboto&display=swap" rel="stylesheet">
+</head>
+
+<body>
+	<header>
+		<nav>
+			<div class="logo">
+				<img th:src="@{/image/Kvk logo.png}" alt="KVK Logo"> KVK Buldhana 1
+			</div>
+			<ul class="nav-links">
+				<li><a href="/users/home">Home</a></li>
+				<li class="nav-link">
+					<a href="/users/about">About</a>
+
+					<ul class="drop-down">
+						<li>
+						<li><a href="/users/mandates">Mandate of KVK</a></li>
+						<li><a href="/users/location">Location</a></li>
+						<li><a href="/users/operational">Operational area</a></li>
+						<li><a href="/users/silent">Silent features of<br>Buldhana District</a></li>
+				</li>
+			</ul>
+			<li class="nav-link">
+				<a href="#activities">Activities</a>
+
+				<ul class="drop-down">
+					<li>
+					<li><a href="/users/training">Training Programs</a></li>
+					<li><a href="/users/front">Front Line Demonstration</a></li>
+					<li><a href="/users/on farm">On Farm Testing</a></li>
+					<li><a href="/users/extension">Extension Activities</a></li>
+			</li>
+			</ul>
+			<li class="nav-link">
+				<a href="#events">Events</a>
+				<ul class="drop-down">
+					<li><a href="/users/event1">Agriculture Exhibition<br>SATPUDA AGROTECH-2023</a></li>
+					<li><a href="/users/event2">Scientific Advisory<br>Committee Meeting</a></li>
+					<li><a href="/users/event3">Visit of ICAR Scientist to KVK</a></li>
+					<li><a href="/users/event4">Skill Development Training<br>Under ASCI</a></li>
+					<li><a href="/users/event5">Visit of Hon. Dr. Shakir Ali,<br>Principal Scientist, ICAR-ATARI,
+							Pune</a></li>
+					<li><a href="/users/event6">Celebration of Agriculture<br>Technology Week</a></li>
+				</ul>
+			</li>
+
+
+			<ul class="nav">
+				<li class="nav-link">
+					<a href="#connect" class="btn">Connect</a>
+					<ul class="drop-down">
+
+						<li><a href="/users/login">Log in</a></li>
+					</ul>
+				</li>
+			</ul>
+
+			</ul>
+		</nav>
+	</header>
+	<h1>ICAR Scientist Visit</h1>
+
+
+
+	<section class="content">
+		<img th:src="@{/image/icar visit.jpeg}" alt="ICAR Visit" class="main-img">
+
+		<div class="info">
+			<h2>🧭 Purpose of the Visit</h2>
+			<p>On August 29, 2024, scientists from ICAR-CICR Nagpur visited KVK Jalgaon Jamod to evaluate progress and
+				provide technological guidance. Dr. Jayant Meshram and Dr. Shivaji Thube were welcomed by Hon. K.G.
+				Ingle and Dr. V.G. Jadhao.</p>
+
+			<h2>🔍 Key Activities</h2>
+			<ul>
+				<li>Visited KVK farm, Azolla unit, nursery, crop cafeteria, and more.</li>
+				<li>Interacted with farmers and KVK module units.</li>
+				<li>Inspected the biofertilizer unit at Dhanora Jangam village.</li>
+			</ul>
+
+			<h2>✅ Outcomes & Recommendations</h2>
+			<p>The ICAR scientists appreciated the initiatives taken by KVK and recommended adoption of advanced ICAR
+				technologies to expand impact.</p>
+		</div>
+
+		<div class="gallery">
+			<img th:src="@{/image/farm tour.jpeg}" alt="Farm Tour">
+			<img th:src="@{/image/scientist interaction.jpeg}" alt="Scientist Interaction">
+			<img th:src="@{/image/Biofertilizers.jpeg}" alt="Biofertilizer Unit">
+		</div>
+	</section>
+	<div class="pdf-download">
+		<button onclick="window.print()">📄 Download PDF</button>
+	</div>
+
+	<footer>
+		<p>&copy; 2025 KVK Jalgaon Jamod | Infrastructure Facilities</p>
+	</footer>
+</body>
+
+</html>

@@ -1,0 +1,160 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>Annual and Monthly Reports</title>
+  <style>
+    body {
+      font-family: Arial, sans-serif;
+      background: white;
+      padding: 20px;
+    }
+    .container {
+      display: flex;
+      justify-content: center;
+      margin-top: 50px;
+    }
+    .button-group {
+      display: flex;
+      justify-content: center;
+      gap: 5px;
+      margin-bottom: 20px;
+    }
+    .button {
+      padding: 20px 30px;
+      font-weight: bold;
+      font-size: 40px;
+      border: 2px solid #3f7d20;
+      background-color: #3f7d20;
+      color: #fff;
+      cursor: pointer;
+      border-radius: 10px;
+      display: flex;
+      align-items: center;
+      gap: 10px;
+    }
+    .button img {
+    width: 30px;
+    height: 30px;
+    display: inline-block; /* Image will be visible by default */
+  }
+    .button.active {
+      background-color: #fff;
+      color: #3f7d20;
+    }
+    .button.active img {
+      display: inline-block;
+    }
+    .card {
+      border: 1px solid #3f7d20;
+      border-radius: 5px;
+      padding: 20px;
+      width: 200px;
+    }
+    .card a {
+      display: block;
+      color: #3f7d20;
+      text-decoration: none;
+      margin-bottom: 10px;
+      font-size: 20px;
+    }
+    .card a:hover {
+      text-decoration: underline;
+    }
+  </style>
+</head>
+<body>
+
+<div class="button-group">
+  <button class="button" id="annualBtn">
+    <img src="/image/Annual.png" alt="check" id="annualImg">
+    Annual
+  </button>
+  <button class="button" id="monthlyBtn">
+    <img src="/image/monthly.png" alt="check" id="monthlyImg">
+    Monthly
+  </button>
+</div>
+
+<div class="container" id="cardContainer">
+  <!-- Card will be injected here -->
+</div>
+
+<script>
+const annualData = [
+  "Annual Report 2021",
+  "Annual Report 2022",
+  "Annual Report 2023",
+  "Action Plan 2022",
+  "Action Plan 2023",
+  "Action Plan 2024"
+];
+
+const monthlyData = [
+  "May,2018",
+  "Jun,2018",
+  "July,2018",
+  "Agust,2018",
+  "Sep,2018",
+  "Oct,2018"
+];
+
+const annualBtn = document.getElementById('annualBtn');
+const monthlyBtn = document.getElementById('monthlyBtn');
+const annualImg = document.getElementById('annualImg');
+const monthlyImg = document.getElementById('monthlyImg');
+const cardContainer = document.getElementById('cardContainer');
+
+let isAnnualVisible = false;
+let isMonthlyVisible = false;
+
+function renderCards(data) {
+  cardContainer.innerHTML = `
+    <div class="card">
+      ${data.map(item => `<a href="#" onclick="handleCardClick('${item}')">${item}</a>`).join('')}
+    </div>
+  `;
+}
+
+function handleCardClick(item) {
+  window.open(`https://example.com/${item}`, '_blank');
+}
+
+annualBtn.addEventListener('click', () => {
+  if (isAnnualVisible) {
+    cardContainer.innerHTML = '';
+    annualBtn.classList.remove('active');
+    annualImg.style.display = 'none';
+    isAnnualVisible = false;
+  } else {
+    renderCards(annualData);
+    monthlyBtn.classList.remove('active');
+    monthlyImg.style.display = 'none';
+    annualBtn.classList.add('active');
+    annualImg.style.display = 'inline-block';
+    isAnnualVisible = true;
+    isMonthlyVisible = false;
+  }
+});
+
+monthlyBtn.addEventListener('click', () => {
+  if (isMonthlyVisible) {
+    cardContainer.innerHTML = '';
+    monthlyBtn.classList.remove('active');
+    monthlyImg.style.display = 'none';
+    isMonthlyVisible = false;
+  } else {
+    renderCards(monthlyData);
+    annualBtn.classList.remove('active');
+    annualImg.style.display = 'none';
+    monthlyBtn.classList.add('active');
+    monthlyImg.style.display = 'inline-block';
+    isMonthlyVisible = true;
+    isAnnualVisible = false;
+  }
+});
+</script>
+
+</body>
+</html>

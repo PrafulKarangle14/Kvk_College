@@ -1,0 +1,22 @@
+<!DOCTYPE html>
+<html xmlns:th="http://www.thymeleaf.org">
+<head><title>Add Cotton</title></head>
+<body>
+<h2>Add Cotton Data</h2>
+<form th:action="@{/fldCotton/save}" th:object="${cotton}" method="post">
+    Soil Type: <input type="text" th:field="*{soilType}"/><br/>
+    Area: <input type="number" step="0.1" th:field="*{area}"/><br/>
+    Yield: <input type="number" step="0.1" th:field="*{yield}"/><br/>
+    Spacing: <input type="number" step="0.1" th:field="*{spacing}"/><br/>
+    Production: <input type="number" step="0.1" th:field="*{production}"/><br/>
+    Sowing Time: <input type="text" th:field="*{sowingTime}"/><br/>
+    Harvesting Time: <input type="text" th:field="*{harvestingTime}"/><br/>
+    Productivity: <input type="number" step="0.1" th:field="*{productivity}"/><br/>
+    Water Requirement: <input type="number" step="0.1" th:field="*{waterRequirement}"/><br/>
+    Fertilizer Requirement: <input type="number" step="0.1" th:field="*{fertilizerRequirement}"/><br/>
+    Weeding & Pest Control: <input type="text" th:field="*{weedingAndPestControl}"/><br/>
+
+    <button type="submit">Save</button>
+</form>
+</body>
+</html>

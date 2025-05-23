@@ -1,0 +1,263 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+	<meta charset="UTF-8">
+	<title>KVK Crop Dashboard</title>
+	<style>
+		body {
+			font-family: 'Segoe UI', sans-serif;
+			background-color: #fff;
+			display: flex;
+			justify-content: center;
+			padding: 40px;
+		}
+
+		.container {
+			display: grid;
+			grid-template-columns: repeat(2, 1fr);
+			gap: 40px;
+		}
+
+		.column {
+			display: flex;
+			flex-direction: column;
+			gap: 16px;
+		}
+
+		.category-title {
+			border: 2px solid #3f7d20;
+			border-radius: 8px;
+			padding: 30px 25px;
+			text-align: center;
+			font-weight: bold;
+			color: #ffffff;
+			font-size: 18px;
+			background-color: #3f7d20;
+			cursor: pointer;
+		}
+
+		.item-button {
+			display: flex;
+			align-items: center;
+			gap: 10px;
+			border: 2px solid #3f7d20;
+			border-radius: 8px;
+			padding: 10px 20px;
+			background-color: #fff;
+			color: #3f7d20;
+			font-weight: 500;
+			cursor: pointer;
+			transition: all 0.2s ease;
+		}
+
+		.item-button img {
+			width: 30px;
+			height: 30px;
+			border-radius: 80px;
+		}
+
+		.item-button:hover {
+			background-color: #e9ffe9;
+		}
+
+		.green-button {
+			background-color: #3f7d20;
+			color: white;
+			padding: 14px 24px;
+			border: none;
+			border-radius: 10px;
+			font-size: 16px;
+			font-weight: 500;
+			cursor: pointer;
+			transition: 0.3s ease;
+			text-align: center;
+		}
+
+		.green-button:hover {
+			background-color: #3f7d20;
+		}
+
+		.field-items {
+			display: none;
+			flex-direction: column;
+			gap: 16px;
+		}
+	</style>
+</head>
+
+<body>
+
+	<div class="container">
+		<!-- Field Crop Section -->
+		<div class="column">
+			<div class="category-title" onclick="toggleFieldItems('fieldItems')">Field Crop</div>
+
+			<div class="field-items" id="fieldItems">
+				<a href="/admin/fldCotten" class="item-button">
+					<img src="/image/cotton.png" alt="Cotton" />
+					Cotton
+				</a>
+
+
+				<a href="/admin/fldCotten" class="item-button">
+					<img src="/image/pigeon.png" alt="Pigeon Pea" />
+					Pigeon Pea
+				</a>
+
+				<a href="/admin/soyabean" class="item-button">
+					<img src="/image/soyabean.png" alt="Soybean" />
+					Soyabean
+				</a>
+
+
+				<a href="/admin/chickpea" class="item-button">
+					<img src="/image/Chickpea.png" alt="Chickpea" />
+					Chickpea
+				</a>
+
+				<a href="/admin/fldGroundnut" class="item-button">
+					<img src="/image/Groundnut.png" alt="Groundnut" />
+					Groundnut
+				</a>
+
+
+
+			</div>
+		</div>
+
+		<!-- Horticultural Crop Section -->
+		<div class="column">
+			<div class="category-title" onclick="toggleFieldItems('horticulturalItems')">Horticultural Crop</div>
+
+			<div class="field-items" id="horticulturalItems">
+				<a href="/admin/fldTurmeric" class="item-button">
+					<img src="/image/Turmeric.png" alt="Turmeric" />
+					Turmeric
+				</a>
+
+				<a href="/admin/fldOnion" class="item-button">
+					<img src="/image/Onion.png" alt="Onion" />
+					Onion
+				</a>
+				<a href="/admin/fldgarlic" class="item-button">
+					<img src="/image/garlic.jpg" alt="Garlic" />
+					Garlic
+				</a>
+				<a href="/admin/fldorange" class="item-button">
+					<img src="/image/orange.png" alt="Orange" />
+					Orange
+				</a>
+
+
+
+
+			</div>
+		</div>
+
+		<!-- Farm Machinery Section -->
+		<div class="column">
+			<div class="category-title" onclick="toggleFieldItems('machineryItems')">Farm Machinery</div>
+
+			<div class="field-items" id="machineryItems">
+				<div class="item-button" onclick="openForm('BBF Planter')">
+					<img src="/image/BBF.png" alt="BBF Planter" />
+					BBF Planter
+				</div>
+
+				<div class="item-button" onclick="openForm('Garlic Planter')">
+					<img src="/image/garlicplanter.png" alt="Garlic Planter" />
+					Garlic Planter
+				</div>
+
+				<div class="item-button" onclick="openForm('Mini Dal Mill')">
+					<img src="/image/mini dal mill.png" alt="Mini Dal Mill" />
+					Mini Dal Mill
+				</div>
+			</div>
+		</div>
+
+		<!-- Livestock & Poultry Section -->
+		<div class="column">
+			<div class="category-title" onclick="toggleFieldItems('livestockItems')">Livestock & Poultry</div>
+
+			<div class="field-items" id="livestockItems">
+				<div class="item-button" onclick="openForm('Poultry')">
+					<img src="/image/poultry.png" alt="Poultry" />
+					Poultry
+				</div>
+
+				<div class="item-button" onclick="openForm('Goat Farming')">
+					<img src="/image/goat.png" alt="Goat Farming" />
+					Goat Farming
+				</div>
+
+				<div class="item-button" onclick="openForm('Dairy Farming')">
+					<img src="/image/dairy farm.png" alt="Dairy Farming" />
+					Dairy Farming (Cow & Buffaloes)
+				</div>
+			</div>
+		</div>
+	</div>
+
+	<script>
+		function openForm(crop) {
+			console.log("Opening form for:", crop);
+
+			// Open specific .html file based on the selected crop in the same page
+			if (crop === 'Cotton') {
+				location.href = 'Cotton.html';
+			} else if (crop === 'Pigeon Pea') {
+				location.href = 'Pigeon.html';
+			} else if (crop === 'Soybean') {
+				location.href = 'Soybean.html';
+			} else if (crop === 'Chickpea') {
+				location.href = 'Chickpea.html';
+			} else if (crop === 'Groundnut') {
+				location.href = 'Groundnut.html';
+			} else if (crop === 'Turmeric') {
+				location.href = 'Turmeric.html';
+			} else if (crop === 'Onion') {
+				location.href = 'Onion.html';
+			} else if (crop === 'Garlic') {
+				location.href = 'Garlic.html';
+			} else if (crop === 'Orange') {
+				location.href = 'Orange.html';
+			} else if (crop === 'BBF Planter') {
+				location.href = 'Bbf-planter.html';
+			} else if (crop === 'Garlic Planter') {
+				location.href = 'Garlic-planter.html';
+			} else if (crop === 'Mini Dal Mill') {
+				location.href = 'Mini-dal-mill.html';
+			} else if (crop === 'Poultry') {
+				location.href = 'Poultry.html';
+			} else if (crop === 'Goat Farming') {
+				location.href = 'Goat.html';
+			} else if (crop === 'Dairy Farming') {
+				location.href = 'Dairy-farming.html';
+			}
+		}
+
+		function toggleFieldItems(id) {
+			const allFieldItems = document.querySelectorAll('.field-items');
+
+			// Check if the clicked section is already visible
+			const selectedFieldItems = document.getElementById(id);
+			if (selectedFieldItems.style.display === 'flex') {
+				// If it's visible, hide it
+				selectedFieldItems.style.display = 'none';
+			} else {
+				// Hide all field items first
+				allFieldItems.forEach(function (item) {
+					item.style.display = 'none';
+				});
+
+				// Then show the clicked section
+				selectedFieldItems.style.display = 'flex';
+			}
+		}
+	</script>
+
+</body>
+
+</html>

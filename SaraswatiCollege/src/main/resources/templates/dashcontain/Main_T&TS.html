@@ -1,0 +1,129 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <title>Training Programs</title>
+  <style>
+    body {
+      font-family: Arial, sans-serif;
+      background: #fff;
+      text-align: center;
+      padding: 50px;
+    }
+    .button {
+      display: block;
+      width: 300px;
+      margin: 20px auto;
+      padding: 15px;
+      background-color: #3f7d20;
+      color: white;
+      font-size: 20px; 
+      border: none;
+      border-radius: 10px;
+      cursor: pointer;
+      text-decoration: none;
+    }
+    .location-button {
+      background-color: white;
+      color: #3f7d20;
+      border: 2px solid #3f7d20;
+    }
+    .dropdown {
+      display: none;
+      margin-top: 10px;
+    }
+    .dropdown a {
+      width: 200px;
+      background-color: white;
+      color: #3f7d20;
+      border: 1px solid #3f7d20;
+      margin: 5px auto;
+      display: block;
+      padding: 10px;
+      border-radius: 5px;
+      cursor: pointer;
+      text-decoration: none;
+    }
+    .locationContainer {
+      display: none;
+      margin-top: 10px;
+    }
+  </style>
+</head>
+<body>
+
+  <button class="button" onclick="toggleLocation('farmerLocation')">Farmer’s Training Programs</button>
+  <div id="farmerLocation" class="locationContainer">
+    <button class="button location-button" onclick="toggleDropdown('farmerDropdown')">Location</button>
+    <div id="farmerDropdown" class="dropdown">
+      <a href="/Farmers_Training_Program/Farmers Training.html">On Campus</a>
+      <a href="/Farmers_Training_Program/Farmers Training.html">Off Campus</a>
+    </div>
+  </div>
+
+  <button class="button" onclick="toggleLocation('youthLocation')">Rural Youth Programs</button>
+  <div id="youthLocation" class="locationContainer">
+    <button class="button location-button" onclick="toggleDropdown('youthDropdown')">Location</button>
+    <div id="youthDropdown" class="dropdown">
+      <a href="/Rural_Youth_Program/youth-on-campus.html">On Campus</a>
+      <a href="/Rural_Youth_Program/youth-on-campus.html">Off Campus</a>
+    </div>
+  </div>
+
+  <button class="button" onclick="toggleLocation('extensionLocation')">Extension Programs</button>
+  <div id="extensionLocation" class="locationContainer">
+    <button class="button location-button" onclick="toggleDropdown('extensionDropdown')">Location</button>
+    <div id="extensionDropdown" class="dropdown">
+      <a href="/Extension_Program/extensionpro.html">On Campus</a>
+      <a href="/Extension_Program/extensionpro.html">Off Campus</a>
+    </div>
+  </div>
+
+  <button class="button" onclick="toggleLocation('specialLocation')">Special Programs</button>
+  <div id="specialLocation" class="locationContainer">
+    <button class="button location-button" onclick="toggleDropdown('specialDropdown')">Location</button>
+    <div id="specialDropdown" class="dropdown">
+      <a href="/Special Programs/SpecialPrograms.html">On Campus</a>
+      <a href="/Special Programs/SpecialPrograms.html">Off Campus</a>
+    </div>
+  </div>
+
+  <script>
+    function toggleLocation(id) {
+      var containers = document.getElementsByClassName('locationContainer');
+      for (var i = 0; i < containers.length; i++) {
+        if (containers[i].id !== id) {
+          containers[i].style.display = 'none';
+          var dropdowns = containers[i].getElementsByClassName('dropdown');
+          for (var j = 0; j < dropdowns.length; j++) {
+            dropdowns[j].style.display = 'none';
+          }
+        }
+      }
+
+      var locationContainer = document.getElementById(id);
+      var dropdown = locationContainer.querySelector('.dropdown');
+
+      if (locationContainer.style.display === 'block') {
+        locationContainer.style.display = 'none';
+        if (dropdown) dropdown.style.display = 'none';
+      } else {
+        locationContainer.style.display = 'block';
+      }
+    }
+
+    function toggleDropdown(id) {
+      var dropdown = document.getElementById(id);
+      var locationContainer = dropdown.closest('.locationContainer');
+
+      if (dropdown.style.display === 'block') {
+        dropdown.style.display = 'none';
+        locationContainer.style.display = 'none';
+      } else {
+        dropdown.style.display = 'block';
+      }
+    }
+  </script>
+
+</body>
+</html>

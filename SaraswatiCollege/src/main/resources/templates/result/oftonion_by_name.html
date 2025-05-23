@@ -1,0 +1,29 @@
+<!DOCTYPE html>
+<html>
+<head><title>Search by Name</title></head>
+<body>
+<h2>Search Oftonion by Name</h2>
+<form action="/oftonion-by-name" method="get">
+    Enter Name: <input type="text" name="name" required>
+    <button type="submit">Search</button>
+</form>
+
+<div th:if="${oftonion != null}">
+    <table border="1">
+        <tr><th>Name</th><td th:text="${oftonion.name}"></td></tr>
+        <tr><th>Soil</th><td th:text="${oftonion.soil}"></td></tr>
+        <tr><th>Area</th><td th:text="${oftonion.area}"></td></tr>
+        <tr><th>Yield</th><td th:text="${oftonion.yield}"></td></tr>
+        <tr><th>Climate</th><td th:text="${oftonion.climate}"></td></tr>
+        <tr><th>Spacing</th><td th:text="${oftonion.spacing}"></td></tr>
+        <tr><th>Wedding</th><td th:text="${oftonion.wedding}"></td></tr>
+        <tr><th>Maturity</th><td th:text="${oftonion.maturity}"></td></tr>
+        <tr><th>Irrigation</th><td th:text="${oftonion.irrigation}"></td></tr>
+        <tr><th>Harvesting</th><td th:text="${oftonion.harvesting}"></td></tr>
+        <tr><th>Sowing Time</th><td th:text="${oftonion.sowingTime}"></td></tr>
+        <tr><th>Fertilization</th><td th:text="${oftonion.fertilization}"></td></tr>
+        <tr><th>Propagation</th><td th:text="${oftonion.propagation}"></td></tr>
+    </table>
+</div>
+</body>
+</html>

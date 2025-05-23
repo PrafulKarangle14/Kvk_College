@@ -1,0 +1,26 @@
+<!DOCTYPE html>
+<html xmlns:th="http://www.thymeleaf.org">
+<head><title>All Cotton</title></head>
+<body>
+<h2>Cotton Crop List</h2>
+<table border="1">
+    <tr>
+        <th>ID</th>
+        <th>Soil Type</th>
+        <th>Area</th>
+        <th>Yield</th>
+        <th>Actions</th>
+    </tr>
+    <tr th:each="cotton : ${cottonList}">
+        <td th:text="${cotton.id}"></td>
+        <td th:text="${cotton.soilType}"></td>
+        <td th:text="${cotton.area}"></td>
+        <td th:text="${cotton.yield}"></td>
+        <td>
+            <a th:href="@{'/fldCotton/view/' + ${cotton.id}}">View</a> |
+            <a th:href="@{'/fldCotton/delete/' + ${cotton.id}}">Delete</a>
+        </td>
+    </tr>
+</table>
+</body>
+</html>
